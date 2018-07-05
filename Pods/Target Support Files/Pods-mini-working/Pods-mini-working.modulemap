@@ -1,0 +1,6 @@
+framework module Pods_mini_working {
+  umbrella header "Pods-mini-working-umbrella.h"
+
+  export *
+  module * { export * }
+}

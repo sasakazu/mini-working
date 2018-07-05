@@ -1,0 +1,6 @@
+framework module Pods_mini_workingTests {
+  umbrella header "Pods-mini-workingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
