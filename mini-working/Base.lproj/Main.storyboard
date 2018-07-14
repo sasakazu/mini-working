@@ -190,6 +190,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="roomNameTapped:" destination="gej-Qz-mHw" eventType="editingDidEnd" id="2LT-PD-cbk"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="都道府県 ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6G-gn-f2m">
                                 <rect key="frame" x="16" y="194" width="105" height="31"/>
@@ -264,6 +267,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="登録する"/>
+                                <connections>
+                                    <action selector="sendData:" destination="gej-Qz-mHw" eventType="touchUpInside" id="Zgm-N3-5EK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2o-lL-t6D">
                                 <rect key="frame" x="127" y="194" width="232" height="30"/>
@@ -291,6 +297,12 @@
                         <viewLayoutGuide key="safeArea" id="3N4-tS-uWC"/>
                     </view>
                     <navigationItem key="navigationItem" title="登録画面" id="bgA-5l-9uB"/>
+                    <connections>
+                        <outlet property="cityTF" destination="Hhb-ds-4M6" id="Fqz-yY-2gp"/>
+                        <outlet property="hourMoneyTF" destination="bst-xJ-dVc" id="br3-ko-nmI"/>
+                        <outlet property="roomNameTF" destination="rfr-sa-bwe" id="Oj3-cv-RCd"/>
+                        <outlet property="todouhuken" destination="t2o-lL-t6D" id="X4f-UJ-A3I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imd-qH-TO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

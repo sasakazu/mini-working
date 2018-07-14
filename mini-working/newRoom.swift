@@ -8,12 +8,23 @@
 
 import UIKit
 
-class newRoom: UIViewController {
+class newRoom: UIViewController,  UITextFieldDelegate {
+    
+    
+    
+    @IBOutlet weak var roomNameTF: UITextField!
+    @IBOutlet weak var todouhuken: UITextField!
+    @IBOutlet weak var cityTF: UITextField!
+    @IBOutlet weak var hourMoneyTF: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        roomNameTF.delegate = self
+        todouhuken.delegate = self
+        cityTF.delegate = self
+        hourMoneyTF.delegate = self
         
     }
 
@@ -23,5 +34,45 @@ class newRoom: UIViewController {
         
     }
     
-
+    @IBAction func roomNameTapped(_ sender: Any) {
+        
+    }
+    
+    
+    
+//    登録するボタンを押したら発動
+    
+    @IBAction func sendData(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+// キーボードを閉じる
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        roomNameTF.resignFirstResponder()
+        todouhuken.resignFirstResponder()
+        cityTF.resignFirstResponder()
+        hourMoneyTF.resignFirstResponder()
+        
+        return true
+        
+    }
+    
+//    別のところをタッチしたら外れる
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        hourMoneyTF.text = hourMoneyTF.text
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    
+    
+    
 }
