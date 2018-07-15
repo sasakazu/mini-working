@@ -8,7 +8,7 @@
 
 import UIKit
 
-class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // UIPickerView.
     private var myUIPicker: UIPickerView!
@@ -99,6 +99,74 @@ class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIP
     @IBAction func sendData(_ sender: Any) {
         
     }
+    
+    
+//    カメラボタン
+    
+    @IBAction func cameraTapped(_ sender: Any) {
+        let sourceType:UIImagePickerControllerSourceType =
+            UIImagePickerControllerSourceType.camera
+        // カメラが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.camera){
+            // インスタンスの作成
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion: nil)
+            
+        }
+        else{
+            print("error")
+            
+        }
+    }
+    
+    
+    
+    //　撮影が完了時した時に呼ばれる
+    func imagePickerController(_ imagePicker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage]
+            as? UIImage {
+        
+        }
+        
+        //閉じる処理
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+//    アルバムを開く
+    
+    @IBAction func albumTapped(_ sender: Any) {
+        
+        let sourceType:UIImagePickerControllerSourceType =
+            UIImagePickerControllerSourceType.photoLibrary
+        
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.photoLibrary){
+            // インスタンスの作成
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion: nil)
+            
+        }
+        else{
+            print("error")
+            
+        }
+        
+    }
+    
+    
+    
+    
     
     
     
