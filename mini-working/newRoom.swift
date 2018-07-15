@@ -31,6 +31,11 @@ class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIP
     @IBOutlet weak var cityTF: UITextField!
     @IBOutlet weak var hourMoneyTF: UITextField!
     
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -164,10 +169,17 @@ class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIP
         
     }
     
+//    写真選択ボタン１２３
+    
+    @IBAction func selectImage1(_ sender: Any) {
+    }
+    
+    @IBAction func selectImage2(_ sender: Any) {
+    }
     
     
-    
-    
+    @IBAction func selectImage3(_ sender: Any) {
+    }
     
     
     
