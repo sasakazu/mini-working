@@ -126,48 +126,8 @@ class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIP
             
         }
     }
-    
-    
-    
-    //　撮影が完了時した時に呼ばれる
-    func imagePickerController(_ imagePicker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let pickedImage = info[UIImagePickerControllerOriginalImage]
-            as? UIImage {
-        
-        }
-        
-        //閉じる処理
-        imagePicker.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    
-    
-    
-//    アルバムを開く
-    
-    @IBAction func albumTapped(_ sender: Any) {
-        
-        let sourceType:UIImagePickerControllerSourceType =
-            UIImagePickerControllerSourceType.photoLibrary
-        
-        if UIImagePickerController.isSourceTypeAvailable(
-            UIImagePickerControllerSourceType.photoLibrary){
-            // インスタンスの作成
-            let cameraPicker = UIImagePickerController()
-            cameraPicker.sourceType = sourceType
-            cameraPicker.delegate = self
-            self.present(cameraPicker, animated: true, completion: nil)
-            
-        }
-        else{
-            print("error")
-            
-        }
-        
-    }
+
+
     
 //    写真選択ボタン１２３
     
@@ -206,7 +166,13 @@ class newRoom: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIP
         
     }
     
+//    cancelボタン
     
+    @IBAction func cancelBtn(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    
+    }
     
     
 }

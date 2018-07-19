@@ -17,6 +17,7 @@
 		733D345120ECBFEF00FE2D60 /* mini_workingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D345020ECBFEF00FE2D60 /* mini_workingUITests.swift */; };
 		733D346020ECC75800FE2D60 /* 女性の人物フリーアイコン素材.png in Resources */ = {isa = PBXBuildFile; fileRef = 733D345F20ECC75800FE2D60 /* 女性の人物フリーアイコン素材.png */; };
 		733D34E020EE2B2400FE2D60 /* newRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D34DF20EE2B2400FE2D60 /* newRoom.swift */; };
+		739C42A52100A0B000F567DA /* acountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739C42A42100A0B000F567DA /* acountViewController.swift */; };
 		D5682C680A8EE870C778331C /* Pods_mini_working.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FCA907B72DCF32A549CBEF /* Pods_mini_working.framework */; };
 		F5A27AE712CD5E036AAB09B1 /* Pods_mini_workingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37179C50515F7F41747EAF81 /* Pods_mini_workingTests.framework */; };
 		FDD78566B1E63C01A0459E6A /* Pods_mini_workingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A4ACD53DCFB947D59A540 /* Pods_mini_workingUITests.framework */; };
@@ -60,6 +61,7 @@
 		733D345220ECBFEF00FE2D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		733D345F20ECC75800FE2D60 /* 女性の人物フリーアイコン素材.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "女性の人物フリーアイコン素材.png"; sourceTree = "<group>"; };
 		733D34DF20EE2B2400FE2D60 /* newRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRoom.swift; sourceTree = "<group>"; };
+		739C42A42100A0B000F567DA /* acountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acountViewController.swift; sourceTree = "<group>"; };
 		7EB77232F0D545C2F3332097 /* Pods-mini-workingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-workingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mini-workingTests/Pods-mini-workingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85B776CB642159AF8350B584 /* Pods-mini-workingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-workingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mini-workingUITests/Pods-mini-workingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8AB2CD00C34300395C63BB0F /* Pods-mini-working.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-working.release.xcconfig"; path = "Pods/Target Support Files/Pods-mini-working/Pods-mini-working.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				733D345E20ECC74700FE2D60 /* images */,
 				733D343720ECBFEF00FE2D60 /* Assets.xcassets */,
 				733D343120ECBFED00FE2D60 /* Main.storyboard */,
+				739C42A42100A0B000F567DA /* acountViewController.swift */,
 				733D34DF20EE2B2400FE2D60 /* newRoom.swift */,
 				733D343920ECBFEF00FE2D60 /* LaunchScreen.storyboard */,
 				733D343C20ECBFEF00FE2D60 /* Info.plist */,
@@ -377,6 +380,7 @@
 				733D343620ECBFED00FE2D60 /* mini_working.xcdatamodeld in Sources */,
 				733D343020ECBFED00FE2D60 /* ViewController.swift in Sources */,
 				733D342E20ECBFED00FE2D60 /* AppDelegate.swift in Sources */,
+				739C42A52100A0B000F567DA /* acountViewController.swift in Sources */,
 				733D34E020EE2B2400FE2D60 /* newRoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +558,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-working/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-working";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -570,7 +577,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-working/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-working";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -587,7 +597,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-workingTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-workingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -605,7 +619,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-workingTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-workingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -622,7 +640,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-workingUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-workingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -639,7 +661,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = "mini-workingUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.88company.mini-workingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
